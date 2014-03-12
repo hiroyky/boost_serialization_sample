@@ -15,14 +15,13 @@ int main() {
   std::ofstream ofs("./output.xml");
   boost::archive::xml_oarchive oa(ofs);
 
-
   Person person(21, "hiro");
 
-  PersonList list;
-  list.push_back(person);
-  list.push_back(person);
+  PersonList plist;
+  plist.list.push_back(person);
+  plist.list.push_back(person);
 
-  oa << boost::serialization::make_nvp("personlist", list);
+  oa << boost::serialization::make_nvp("personlist", plist);
 
   ofs.close();
   return 0;

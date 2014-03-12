@@ -29,7 +29,7 @@ private:
   }
 };
 
-class PersonList: public std::list<Person> {
+class PersonList {
  public:
   std::list<Person> list;
 private:
